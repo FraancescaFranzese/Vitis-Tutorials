@@ -49,7 +49,7 @@ Therefore, the tutorial is divided into two independent directories that show th
 The following outlines the main modifications made to make the code compatible with AIE-ML compilation. 
 
 In the first case, the AIE API library calls have been used. AIE API is a portable programming interface for AIE accelerators. It is implemented as a C++ header-only library that provides types and operations that get translated into efficient low-level intrinsics. The API also provides higher-level abstractions such as iterators and multi-dimensional arrays. [[6]].
-First, instead of using the keyword "auto," vectors and accumulators must be explicitly declared: 
+First, instead of using the keyword `auto`, vectors and accumulators must be explicitly declared: 
 
 ```cpp
 
@@ -59,7 +59,7 @@ First, instead of using the keyword "auto," vectors and accumulators must be exp
 	aie::vector<float, 8> p21 = (*pInC++).cast_to<float>();
 
 ```
-The function fpmac() is not supported for AIE-ML, as it belongs to the intrinsic AIE APIs, which are strictly dependent on the device's hardware. Therefore, it will be replaced with the AIE API calls aie::mac() and aie::msc(). The latter take as input the accumulator to which the result of the multiplication is added or subtracted, and the two vectors to be multiplied. Therefore, the code also includes some conversions to transform vectors into accumulators and vice versa.
+The function `fpmac()` is not supported for AIE-ML, as it belongs to the intrinsic AIE APIs, which are strictly dependent on the device's hardware. Therefore, it will be replaced with the AIE API calls `aie::mac()` and `aie::msc()`. The latter take as input the accumulator to which the result of the multiplication is added or subtracted, and the two vectors to be multiplied. Therefore, the code also includes some conversions to transform vectors into accumulators and vice versa.
 
 
 ```cpp
@@ -73,7 +73,7 @@ The function fpmac() is not supported for AIE-ML, as it belongs to the intrinsic
 
 ```
 
-In the case with the int16 data type, the modifications are very similar. However, instead of using the AIE engine APIs, the intrinsic calls mac() and msc() have been used:
+In the case with the int16 data type, the modifications are very similar. However, instead of using the AIE engine APIs, the intrinsic calls `mac()` and `msc()` have been used:
 ```cpp
 
 	// get data for first x interpolation

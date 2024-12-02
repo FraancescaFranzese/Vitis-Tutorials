@@ -14,11 +14,7 @@
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [Computing Interpolated Values](#computing-interpolated-values)
-3. [Design Assumptions](#design-assumptions)
-4. [AI Engine Code Vectorization](#ai-engine-code-vectorization)
-5. [Data Interface](#data-interface)
-6. [AI Engine Kernel Processing](#ai-engine-kernel-processing)
+2. [Kernel Code Modifications to target AIE-ML](#kernel-code-modifications-to-target-aie-ml)
 7. [Running the Example](#running-the-example)
 8. [Analyzing Results](#analyzing-results)
 9. [Customizing the Example](#customizing-the-example)
@@ -42,15 +38,13 @@ Bilinear interpolation is one of the simplest and fastest interpolation methods,
 
 This tutorial targets AIE-ML device, but shares test cases and description files with AIE [11-Bilinear_Interpolation](../../../AIE/Design_Tutorials/11-Bilinear_Interpolation).
 
-### AIE-ML Engine Data Type
+### AIE-ML Engine Input and Output Data Type
 This example is available in two versions:
 * The first version uses MATLAB® to generate test vectors, which are sequences of `int32` numbers. Although actual data is single precision floating-point, it is difficult to express such numbers in text format. In order to capture full precision, the 32 bits used to represent a floating-point number (sign, exponent, mantissa) are written as equivalent `int32` values. A similar format is used for files containing output data.
 * The second version uses MATLAB® to generate test vectors, as sequences of `int16` numbers. This idea was experimented because 32-bit floating-point vector data path is not directly supported by AIE-ML processor, but can be emulated via decomposition into multiple multiplications of 16 x 16-bit. As a result, the float-based design experiences a performance loss compared to the AIE case. Therefore, the idea was to test a version using the int16 format, which is much faster at the cost of reduced result accuracy.
 Therefore, the tutorial is divided into two independent directories that show the two developed cases.
 
-## AI Engine Kernel Processing
-
-### Kernel Code Modifications
+## Kernel Code Modifications to target AIE-ML
 
 The following outlines the main modifications made to make the code compatible with AIE-ML compilation. 
 
@@ -150,6 +144,7 @@ $ make analyze
 ```
 
 
+## Customizing the example
 
 ### Specifying a Test Image and Output Resolution
 

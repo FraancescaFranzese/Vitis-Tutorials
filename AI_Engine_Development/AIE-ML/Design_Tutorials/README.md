@@ -53,7 +53,7 @@ The AI Engine Development Design Tutorials showcase the two major phases of AI E
  </tr>  
  <tr>
  <td align="center"><a href="./11_Bilinear_Interpolation/">Bilinear Interpolation on AIE-ML</a></td>
- <td>This tutorial demonstrates how the bilinear interpolation algorithm may be efficiently implemented using AI Engines. It also provides guidance for customizing the design to function with varying image resolutions, and to take advantage of multicore processing on the AI Engine array to achieve desired throughput.</td>
+ <td>This tutorial demonstrates how the bilinear interpolation algorithm may be efficiently implemented using AI-ML Engines. It also provides guidance for customizing the design to function with varying image resolutions, and to take advantage of multicore processing on the AI Engine array to achieve desired throughput.</td>
  </tr>
 </table>
 

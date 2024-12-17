@@ -188,10 +188,3 @@ The ``image_transform`` function reads the test image file, performs a sequence 
 
 [[6]] AI Engine API User Guide (AIE-API) 2024.2 - OverView* https://www.xilinx.com/htmldocs/xilinx2024_2/aiengine_api/aie_api/doc/index.html
 
-## Support
-
-GitHub issues will be used for tracking requests and bugs. For questions, go to [support.xilinx.com](http://support.xilinx.com/).
-
-
-<p class="sphinxhide" align="center"><sub>Copyright © 2020–2024 Advanced Micro Devices, Inc</sub></p>
-<p class="sphinxhide" align="center"><sup><a href="https://www.amd.com/en/corporate/copyright">Terms and Conditions</a></sup></p>

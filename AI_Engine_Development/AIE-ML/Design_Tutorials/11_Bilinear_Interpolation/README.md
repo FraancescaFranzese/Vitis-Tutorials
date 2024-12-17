@@ -12,10 +12,6 @@
 
 [References](#references)
 
-[Support](#support)
-
-[License](#license)
-
 ## Introduction
 
 Bilinear interpolation is a method for interpolating functions of two variables using repeated linear interpolation. It is commonly used in the following applications:

@@ -23,7 +23,7 @@ Bilinear interpolation is a method for interpolating functions of two variables 
 
 Bilinear interpolation is one of the simplest and fastest interpolation methods, but it can also introduce some artifacts such as blurring or aliasing. More advanced interpolation methods, such as bicubic interpolation or spline interpolation, can produce smoother and more accurate results, but they are also more computationally expensive.
 
-This tutorial targets AIE-ML device, but shares test cases and description files with AIE [11-Bilinear_Interpolation](../../../AIE/Design_Tutorials/11-Bilinear_Interpolation).
+This tutorial targets AIE-ML device, and it has been setup starting from the files of the tutorial AIE [11-Bilinear_Interpolation](../../../AIE/Design_Tutorials/11-Bilinear_Interpolation).
 
 ### AIE-ML Engine Input and Output Data Type
 This example is available in two versions:

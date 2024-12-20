@@ -18,7 +18,7 @@
 
 ## Introduction
 
-This tutorial show how to create a system design running on the AIE-ML Engine, PS, and Programmable Logic (PL). The AI Engine domain contains the bilinear interpolation graph that has been used in the Bilinear Interpolation tutorial:
+This tutorial shows how to create a system design running on the AIE-ML Engine, PS, and Programmable Logic(PL). The AI Engine domain contains the bilinear interpolation graph that has been used in the Bilinear Interpolation tutorial:
 
 https://github.com/FraancescaFranzese/Vitis-Tutorials/tree/2024.2/AI_Engine_Development/AIE-ML/Design_Tutorials/11_Bilinear_Interpolation
 

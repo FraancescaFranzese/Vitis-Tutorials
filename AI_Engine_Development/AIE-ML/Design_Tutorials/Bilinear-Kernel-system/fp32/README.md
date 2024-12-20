@@ -372,7 +372,7 @@ cd /run/media/*1
 ```
 
 You should see on the screen:
-![Test-hw](../images/hw_test.png)
+![Test-hw](../images/hw_test_1.png)
 
 **IMPORTANT**: To re-run the application you need to power cycle the board.
 

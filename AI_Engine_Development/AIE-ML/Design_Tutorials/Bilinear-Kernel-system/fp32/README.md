@@ -47,7 +47,7 @@ https://github.com/FraancescaFranzese/Vitis-Tutorials/tree/2024.2/AI_Engine_Deve
 
 The design that will be used is shown in the following figure:
 
-![System Diagram](../images/system_diagram.png)
+![System Diagram](../images/system_diagram.jpg)
 
 - The green area delimits the AIE-ML domain;
 - The blue area is the Pl domain;

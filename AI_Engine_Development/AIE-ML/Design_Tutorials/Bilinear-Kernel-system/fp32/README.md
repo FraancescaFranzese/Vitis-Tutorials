@@ -134,8 +134,9 @@ make xsa
 
 ### 3. Compile the A72 Host Application
 
-Once the `.xsa` has been generated, the host application is compiled using g++. The host code uses [XRT](http://www.github.com/Xilinx/XRT) (Xilinx Run Time) as an API to talk to the AI Engine and PL kernels. Let's have a look to the `host.cpp` code.
+Once the `.xsa` has been generated, the host application is compiled using g++. The host code uses [[XRT]](http://www.github.com/Xilinx/XRT) (Xilinx Run Time) as an API to talk to the AI Engine and PL kernels. Xilinx® Runtime (XRT) is implemented as a combination of userspace and kernel driver components. XRT supports both PCIe based accelerator cards and MPSoC based embedded architecture provides standardized software interface to Xilinx® FPGA. The key user APIs are defined in xrt.h header file [[1]].
 
+Let's have a look to the `host.cpp` code.
 After a check on the number of argument, the host application opens the XCLBIN file, which contains the bitstream for the PL and the executables for AIE array.
 
 ```cpp
@@ -211,9 +212,6 @@ out_bo.sync(XCL_BO_SYNC_BO_FROM_DEVICE);
 
 ```
 
-**Note:** [XRT](https://xilinx.github.io/XRT/master/html/xrt_native_apis.html) is used in the host application. This API layer is used to communicate with the PL, specifically the PLIO kernels for reading and writing data. To understand how to use this API in an AI Engine application refer to ["Programming the PS Host Application"](https://docs.amd.com/r/en-US/ug1076-ai-engine-environment/Host-Programming-on-Linux). 
-
-
 The linker it is using the library `-lxrt_coreutil`.To compile the host code, it is required to use the c++17 package. Ensure your `gcc` or `g++` compiler has the necessary packages installed.
 
 **Note**: XRT needs to be installed on the host and the $XILINX_XRT variable should be set by sourcing the `/opt/xilinx/xrt/setup.sh`.
@@ -232,8 +230,7 @@ Then run the command:
 ### 4. Package the Design
 
 Now that the platform has been created, it is possible to generate the packaged SD card directory containing everything to run the generated application and the `.xclbin` file. In addition to packaging, the `emconfigutil` command is used to generate the device, board, and device tree details (emconfig.json) which are required by XRT before loading the xclbin.
-
-To package the design, run the following command:
+To package the design, run the command:
 
 ```bash
 make package
@@ -242,18 +239,13 @@ make package
 ### 5. Run Software Emulation
 
 After packaging everything is set to run emulation. Software emulation is an abstract model and first step to build and test the system in a functional process. It does not use any of the PetaLinux drivers such as Zynq OpenCL (ZOCL), interrupt controller, or Device Tree Binary (DTB). Hence, the overhead of creating an sd_card.img, and booting PetaLinux on a full QEMU machine is too heavyweight for software emulation and can be avoided.
-
 To run emulation use the following command:
 
 ```bash
 make run_emu 
 ```
 Simulation takes some time. At the end of the process, you should see on the screen:
-
-// INSERIRE IMMAGINE
-
-
-
+![System Diagram](../images/floating_point_verification.png)
 
 ## Section 4: Compile AI Engine Code for AIE Simulator
 
@@ -380,7 +372,7 @@ You should see **TEST PASSED**. You have successfully run your design on hardwar
 
 ## References
 
-[XRT]:<https://xilinx.github.io/XRT/master/html/index.html> "Xilinx Runtime documentation"
+[1]:<https://xilinx.github.io/XRT/master/html/index.html> "Xilinx Runtime documentation"
 
-[[XRT]]: Xilinx Runtime. © Copyright 2017-2023, Advanced Micro Devices, Inc. Last updated on October 7, 2022.
+[[1]]: Xilinx Runtime. © Copyright 2017-2023, Advanced Micro Devices, Inc. Last updated on October 7, 2022.
 

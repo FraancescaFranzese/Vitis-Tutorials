@@ -211,7 +211,7 @@ out_bo.sync(XCL_BO_SYNC_BO_FROM_DEVICE);
 
 ```
 
-**Note:** [XRT](https://xilinx.github.io/XRT/master/html/xrt_native_apis.html) is used in the host application. This API layer is used to communicate with the PL, specifically the PLIO kernels for reading and writing data. To understand how to use this API in an AI Engine application refer to ["Programming the PS Host Application"](https://docs.amd.com/r/en-US/ug1076-ai-engine-environment/Host-Programming-on-Linux).
+**Note:** [XRT](https://xilinx.github.io/XRT/master/html/xrt_native_apis.html) is used in the host application. This API layer is used to communicate with the PL, specifically the PLIO kernels for reading and writing data. To understand how to use this API in an AI Engine application refer to ["Programming the PS Host Application"](https://docs.amd.com/r/en-US/ug1076-ai-engine-environment/Host-Programming-on-Linux). 
 
 
 The linker it is using the library `-lxrt_coreutil`.To compile the host code, it is required to use the c++17 package. Ensure your `gcc` or `g++` compiler has the necessary packages installed.
@@ -380,8 +380,7 @@ You should see **TEST PASSED**. You have successfully run your design on hardwar
 
 ## References
 
-[1]:<https://en.wikipedia.org/wiki/Bilinear_interpolation> "Bilinear interpolation"
+[XRT]:<https://xilinx.github.io/XRT/master/html/index.html> "Xilinx Runtime documentation"
 
-[[1]]: Bilinear interpolation. 17 May 2023, 14:05 UTC. In Wikipedia: The Free Encyclopedia. Wikimedia Foundation Inc. Encyclopedia on-line. Available from https://en.wikipedia.org/wiki/Bilinear_interpolation. Internet. Retrieved 4 August 2023.
-
+[[XRT]]: Xilinx Runtime. © Copyright 2017-2023, Advanced Micro Devices, Inc. Last updated on October 7, 2022.
 

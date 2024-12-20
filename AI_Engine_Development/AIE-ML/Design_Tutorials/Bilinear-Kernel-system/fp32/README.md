@@ -245,7 +245,7 @@ To run emulation use the following command:
 make run_emu 
 ```
 Simulation takes some time. At the end of the process, you should see on the screen:
-![System Diagram](../images/floating_point_verification.png)
+![hw_emu_test](../images/floating_point_verification.png)
 
 ## Section 4: Compile AI Engine Code for AIE Simulator
 
@@ -281,7 +281,6 @@ To open the summary file, use the following command:
 ## Section 5: Simulate the AI Engine Graph using the `aiesimulator` 
 
 After the graph has been compiled, you can simulate your design with the `aiesimulator` command. This uses a cycle-approximate model to test your graph and get preliminary throughput information early in the design cycle, while the PL developers continue to work on the platform for the application.
-
 To run simulation use the command:
 
 ```bash
@@ -290,7 +289,7 @@ make sim TARGET=hw
     
 ### 1. Compiling HLS Kernels Using v++
 
-As done for sw_emu target in **Section 3**, compile the `mm2s`, and `s2mm` PL HLS kernels using the `v++` compiler command - which takes in an HLS kernel source and produces an `.xo` file.
+As done for `sw_emu` target in **Section 3**, compile the `mm2s`, and `s2mm` PL HLS kernels using the `v++` compiler command - which takes in an HLS kernel source and produces an `.xo` file.
 
 To compile the kernels, run the following command:
 
@@ -307,7 +306,7 @@ To build the design, run the following command:
 make xsa TARGET=hw_emu
 ```
 
-Now you have a generated `.xsa` that will be used to execute your design on the platform.
+Now the generated `.xsa` file will be used to execute the design on the platform.
 
 ### 3.Compile the A72 Host Application
 
@@ -365,7 +364,15 @@ export XILINX_XRT=/usr
 ./host.exe a.xclbin
 ```
 
-You should see **TEST PASSED**. You have successfully run your design on hardware.
+Or you can use the bash script `embedded_exec.sh`:
+```bash
+dmesg -n 4 && echo "Hide DRM messages..."
+cd /run/media/*1
+./embedded_exec.sh
+```
+
+You should see on the screen:
+![Test-hw](../images/hw_test.png)
 
 **IMPORTANT**: To re-run the application you need to power cycle the board.
 

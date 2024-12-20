@@ -5,8 +5,8 @@
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [Tutorial Overview] (#tutorial-overview)
-3. [Section 1: Compile AI Engine Code using the AI Engine Compiler for `x86simulator]
+2. [Tutorial Overview](#tutorial-overview)
+3. [Section 1: Compile AI Engine Code using the AI Engine Compiler for `x86simulator](#section-1)
 4. [Section 2: Simulate the AI Engine Graph using the `x86simulator`]
 5. [Section 3: Compile and Run Software Emulation]
 6. [Section 4: Compile AI Engine Code for AIE Simulator]

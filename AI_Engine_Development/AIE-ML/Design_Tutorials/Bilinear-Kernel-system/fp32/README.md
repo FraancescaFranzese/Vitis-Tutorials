@@ -62,7 +62,7 @@ The design that will be used is shown in the following figure:
 
 ## Section 1: Compile AI Engine Code using the AI Engine Compiler for `x86simulator
 
-### Running x86 Simulation
+### Compiling an AI Engine ADF Graph
 
 The first step is to perform a functional simulation of the design to verify its behaviour. The x86 simulator runs exclusively on the tool development machine. This means its performance and memory use are defined by the development machine.
 To compile the graph for x86 simulator, the target to be used is x86sim, use:
@@ -72,12 +72,6 @@ make aie
 ```
 
 The generated output from `aiecompiler` is the `Work` directory, and the `libadf.a` file. This file contains the compiled AI Engine configuration, graph, and Kernel `.elf` files.
-
-To open the summary file, use the following command:
-
-vitis_analyzer -a ./Work/graph.aiecompile_summary
-
-The first command compiles graph code for simulation on an x86 processor, the second command runs the simulation, and the final command invokes MATLAB to compare the simulator output with test vectors.
 
 #### Vitis Analyzer Compile Summary
 
@@ -104,8 +98,7 @@ make sim
 
 ### 1. Compiling HLS Kernels using v++
 
-To compile the `mm2s`, and `s2mm` PL HLS kernels, use the `v++` compiler command which takes in an HLS kernel source and produces an `.xo` file.
-
+To compile the `mm2s`, and `s2mm` PL HLS kernels, the `v++` compiler has been used, which command takes in an HLS kernel source and produces an `.xo` file.
 To compile the kernels, run the following command:
 
 ```bash
@@ -114,9 +107,8 @@ make kernels
 
 ### 2. Use V++ to Link AI Engine and HLS Kernels with the Platform
 
-After the AI Engine kernels, graph, PL kernel, and HLS kernels have been compiled and simulated, you can use `v++` to link them with the platform to generate an `.xsa`.
-
-At this point, it is important to tell the linker how to connect the different kernel together (from the AI Engine array to PL and vice versa). These connections are described in a configuration file: `system.cfg`, which is shown below:
+After the AI Engine kernels, AI Engine graph, PL kernel, and HLS kernels have been compiled and simulated, you can use `v++` to link them with the platform to generate an `.xsa`.
+At this point, it is important to tell the linker how to connect the different kernel together (from the AI Engine array to PL and viceversa). These connections are described in a configuration file: `system.cfg`, which is shown below:
 
 ```ini
 [connectivity]
@@ -134,7 +126,6 @@ stream_connect=ai_engine_0.DOUT_0:s2mm_1.s
 | `stream_connect/sc` | Specifies the streaming connections to be made between PL/AI Engine or PL/PL. It should always be an output of a kernel to the input of a kernel.|
 
 For `ai_engine_0` the names of the ports are the same provided in the `bilinear_graph.h`.
-
 To build the design run the follow command:
 
 ```bash
@@ -143,7 +134,7 @@ make xsa
 
 ### 3. Compile the A72 Host Application
 
-When all the new AI Engine outputs are created, the host application is compiled using g++. The host code uses [XRT](http://www.github.com/Xilinx/XRT) (Xilinx Run Time) as an API to talk to the AI Engine and PL kernels. Let's have a look to the `host.cpp` code.
+Once the `.xsa` has been generated, the host application is compiled using g++. The host code uses [XRT](http://www.github.com/Xilinx/XRT) (Xilinx Run Time) as an API to talk to the AI Engine and PL kernels. Let's have a look to the `host.cpp` code.
 
 After a check on the number of argument, the host application opens the XCLBIN file, which contains the bitstream for the PL and the executables for AIE array.
 

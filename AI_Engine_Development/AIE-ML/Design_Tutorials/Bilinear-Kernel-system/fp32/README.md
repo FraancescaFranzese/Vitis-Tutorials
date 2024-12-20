@@ -23,7 +23,7 @@ This tutorial shows how to create a system design running on the AIE-ML Engine, 
 https://github.com/FraancescaFranzese/Vitis-Tutorials/tree/2024.2/AI_Engine_Development/AIE-ML/Design_Tutorials/11_Bilinear_Interpolation
 
 The PL domain contains interfaces that provide input and capture output from the AI Engine. The PS domain contains a host application that controls the entire system. Indeed, the purpose of the tutorial is to show how to access an AI Engine kernel from the operating system.
-This tutorial steps are: software emulation, hardware emulation, and hardware flow. By default, the Makefile is set for sw_emu. If you need to build for hw_emu,hw, use the corresponding TARGET option as described in corresponding sections.
+This tutorial steps are: software emulation, hardware emulation, and hardware flow. By default, the Makefile is set for software emulation (`sw_emu`). If you need to build for hardware or hardware emulation (`hw` or `hw_emu`), use the corresponding TARGET option as described in corresponding sections.
 
 IMPORTANT: Before beginning the tutorial ensure you have installed Vitis" 2024.1 software. The software includes all the embedded base platforms including the VEK280 base platform that is used in this tutorial. In addition, ensure you have downloaded the Common Images for Embedded Vitis Platforms from this link.
 

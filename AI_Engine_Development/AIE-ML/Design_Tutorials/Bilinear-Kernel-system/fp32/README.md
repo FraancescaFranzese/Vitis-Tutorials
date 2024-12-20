@@ -22,12 +22,7 @@ This tutorial shows how to create a system design running on the AIE-ML Engine, 
 
 https://github.com/FraancescaFranzese/Vitis-Tutorials/tree/2024.2/AI_Engine_Development/AIE-ML/Design_Tutorials/11_Bilinear_Interpolation
 
-The whole project is based on the AMD-Xilinx tutorials, which can be found on Github at the following links:
-https://github.com/FraancescaFranzese/Vitis-Tutorials/tree/2024.2/AI_Engine_Development/AIE/Design_Tutorials/11-Bilinear_Interpolation
-https://github.com/FraancescaFranzese/Vitis-Tutorials/tree/2024.2/AI_Engine_Development/AIE/Feature_Tutorials/05-AI-engine-versal-integration
-
 The PL domain contains interfaces that provide input and capture output from the AI Engine. The PS domain contains a host application that controls the entire system. Indeed, the purpose of the tutorial is to show how to access an AI Engine kernel from the operating system.
-
 This tutorial steps are: software emulation, hardware emulation, and hardware flow. By default, the Makefile is set for sw_emu. If you need to build for hw_emu,hw, use the corresponding TARGET option as described in corresponding sections.
 
 IMPORTANT: Before beginning the tutorial ensure you have installed Vitis" 2024.1 software. The software includes all the embedded base platforms including the VEK280 base platform that is used in this tutorial. In addition, ensure you have downloaded the Common Images for Embedded Vitis Platforms from this link.
@@ -44,12 +39,15 @@ Set up your ROOTFS, and IMAGE to point to the rootfs.ext4 and Image files locate
 Set up your PLATFORM_REPO_PATHS environment variable to $XILINX_VITIS/base_platforms/xilinx_vck190_base_202410_1/xilinx_vck190_base_202410_1.xpfm.
 This tutorial targets VEK280 production board for 2024.1 version.
 
+The whole project is based on two AMD-Xilinx tutorials, which can be found on Github at the following links:
+https://github.com/FraancescaFranzese/Vitis-Tutorials/tree/2024.2/AI_Engine_Development/AIE/Design_Tutorials/11-Bilinear_Interpolation
+https://github.com/FraancescaFranzese/Vitis-Tutorials/tree/2024.2/AI_Engine_Development/AIE/Feature_Tutorials/05-AI-engine-versal-integration
 
 ## Tutorial Overview
 
 The design that will be used is shown in the following figure:
 
-![System Diagram](./images/block_diagram.png)
+![System Diagram](../images/system_diagram.png)
 
 - The green area delimits the AIE-ML domain;
 - The blue area is the Pl domain;

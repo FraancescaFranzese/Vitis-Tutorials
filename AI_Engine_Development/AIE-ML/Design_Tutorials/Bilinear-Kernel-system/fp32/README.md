@@ -50,7 +50,7 @@ The design that will be used is shown in the following figure:
 ![System Diagram](../images/system_diagram.jpg)
 
 - The green area delimits the AIE-ML domain;
-- The blue area is the Pl domain;
+- The blue area is the PL domain;
 - The orange area represents CIPS, NoC and DDR.
 
 |Kernel|Type|Comment|

@@ -1,10 +1,18 @@
 #######################################
-Embedded Software
+Vitis HLS Tutorials
 #######################################
 
 
 
-Learn the Vitis HLS Design Flows.
+Before diving into the Vitis™ HLS tutorials, beginner users may prefer to start with the `Vitis HLS Getting Started tutorial <https://docs.amd.com/r/en-US/Vitis-Tutorials-Getting-Started/Vitis-HLS>`_. These tutorials offer a broader introduction to the Vitis Unified IDE, in addition to briefly describing the most simple HLS flows and use cases.
+
+
+
+
+
+
+
+
 
 
 ************************************************************************************************

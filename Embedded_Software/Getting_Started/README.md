@@ -71,8 +71,7 @@ The SDT (System Device Tree) is a new concept in Vitis Unified flow. Previously,
 - The diagram should be read from top to bottom.
 - The diagram is for illustration only.
 
-<img src="./images/vitis_flow.PNG" alt="Missing Image" width="600" height="423">
-</details>
+![missing image](./images/vitis_flow.PNG)
 
 
 Users will now be presented with a drop down box to select the operating system and the processor will be auto-populated from the SDT. Tick the Generate boot artifacts box and proceed

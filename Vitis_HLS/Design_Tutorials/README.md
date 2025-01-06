@@ -6,9 +6,9 @@
 </table>
 
 
-### Design Tutorials
+# Design Tutorials
 
-These tutorials illustrate higher-level Vitis™ HLS concepts or design flows, walk through specific examples or reference designs, and contain more complex and complete designs or applications.
+Design tutorials illustrate higher-level Vitis™ HLS concepts or design flows, walk through specific examples or reference designs, and describe more complex and complete designs or applications.
 
  <table style="width:100%">
  <tr>

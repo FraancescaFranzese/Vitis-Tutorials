@@ -1,4 +1,4 @@
-﻿<table class="sphinxhide" width="100%">
+<table class="sphinxhide" width="100%">
  <tr width="100%">
     <td align="center"><img src="https://raw.githubusercontent.com/Xilinx/Image-Collateral/main/xilinx-logo.png" width="30%"/><h1>AMD Vitis™ AI Engine</h1>
     <a href="https://www.xilinx.com/products/design-tools/vitis.html">See Vitis Development Environment on xilinx.com</br></a>
@@ -39,11 +39,14 @@ If you are new with AI Engine, the following training courses can help you under
 
 ### Environment Settings
 
-**IMPORTANT**: Before beginning the tutorial make sure you have read and followed the *[Vitis Software Platform Release Notes](https://docs.amd.com/r/en-US/ug1393-vitis-application-acceleration/Vitis-Software-Platform-Release-Notes)* (v2024.2) for setting up software and installing the VCK190 base platform.
+**IMPORTANT**: Before beginning the tutorial make sure you have read and followed the *Vitis Release Notes And Installation Guide* ([UG1742](https://docs.amd.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1742-vitis-release-notes)) (v2024.2) for setting up software and installing the VCK190 base platform.
+
+
+
 
 Run the following steps to setup environment (do **NOT** apply to tutorials that do not use the VCK190 base platform):
 
-1. Set up your platform by running the `xilinx-versal-common-v2024.2/environment-setup-cortexa72-cortexa53-xilinx-linux` script as provided in the platform download. This script sets up the `SYSROOT` and `CXX` variables. If the script is not present, you **must** run the `xilinx-versal-common-v2024.2/sdk.sh`.
+1. Set up your platform by running the `xilinx-versal-common-v2024.2/environment-setup-cortexa72-cortexa53-xilinx-linux` script as provided in the platform download. This script sets up the `SYSROOT` and `CXX` variables. If the script is not present, you **must** run the `xilinx-versal-common-v2024.2/sdk.sh` command.
 2. Set up your `ROOTFS` to point to the `xilinx-versal-common-v2024.2/rootfs.ext4`.
 3. Set up your `IMAGE` to point to `xilinx-versal-common-v2024.2/Image`.
 4. Set up your `PLATFORM_REPO_PATHS` environment variable based upon where you downloaded the platform.

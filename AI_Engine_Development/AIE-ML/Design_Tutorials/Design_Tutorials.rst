@@ -17,10 +17,14 @@ The AI Engine Development Design Tutorials showcase the two major phases of AI E
    :caption: Design Tutorials
    :hidden:
 
-   Versal Custom Thin Platform Extensible System <./01-Versal_Custom_Thin_Platform_Extensible_System/README.md>
    AIE-ML Programming <./01-AIE-ML-programming-and-optimization/README.md>
    Prime Factor FFT-1008 on AIE-ML <./02-Prime-Factor-FFT/README.md>
    AIE-ML LeNet Tutorial <./03-AIE-ML-lenet_tutorial/README.md>
+   AIE API based FFT for Many Instances Applications <./04-AIE-API-based-FFT-for-many-instances-applications/README.md>
+   Softmax Function on AIE-ML <./05-Softmax-Function/README.md>
+   Migrating Farrow Filter from AIE to AIE-ML <./06-farrow_filter/README.md>
+   Polyphase Channelizer on AIE-ML using Vitis Libraries <./07-Channelizer-Using-Vitis-Libraries/README.md>
+   MNIST ConvNet on AIE-ML <./08-MNIST-ConvNet/README.md>
 
 
 
@@ -36,8 +40,6 @@ The AI Engine Development Design Tutorials showcase the two major phases of AI E
    * - Tutorial
      - Description
 	 
-   * - :doc:`Versal Custom Thin Platform Extensible System <./01-Versal_Custom_Thin_Platform_Extensible_System/README>`
-     - This is a Versal system example design based on a VEK280 thin custom platform (Minimal clocks and AXI exposed to PL) that includes HLS/RTL kernels and AI Engine kernel using a full Makefile build-flow.
 
    * - :doc:`AIE-ML Programming <./01-AIE-ML-programming-and-optimization/README>`
      - This tutorial helps user understand the differences between AI Engine and AI Engine-ML architecture, it is based on matrix multiplication which is a usual algorithm in Machine Learning applications.
@@ -48,6 +50,20 @@ The AI Engine Development Design Tutorials showcase the two major phases of AI E
    * - :doc:`AIE-ML LeNet Tutorial <./03-AIE-ML-lenet_tutorial/README>`
      - This tutorial uses the LeNet algorithm to implement a system-level design to perform image classification using the AIE-ML architecture and PL logic, including block RAM (BRAM). The design demonstrates functional partitioning between the AIE-ML and PL. It also highlights memory partitioning and hierarchy among DDR memory, PL (BRAM), Memory tile and AI Engine memory.
 
+   * - :doc:`AIE API based FFT for Many Instances Applications <./04-AIE-API-based-FFT-for-many-instances-applications/README>`
+     - This tutorial walks the user through the design and the implementation of an FFT for many parallel signals on a Real-Time system, using the AI Engine APIs. The design performance objective is minimizing power and utilization, maintaining a high throughput to at least match the Real-Time acquisition bandwidth. Moreover, the design leverages the AIE-ML Memory Tiles to minimize programmable logic utilization. The considered case study comprises 128 parallel signals, each with a 125MSa/s sample rate and CINT16 datatype, with a total aggregated bandwidth of 64GBytes/s.
+
+   * - :doc:`Softmax Function on AIE-ML <./05-Softmax-Function/README>`
+     - This tutorial uses the LeNet algorithm to implement a system-level design to perform image classification using the AIE-ML architecture and PL logic, including block RAM (BRAM). The design demonstrates functional partitioning between the AIE-ML and PL. It also highlights memory partitioning and hierarchy among DDR memory, PL (BRAM), Memory tile and AI Engine memory.
+
+   * - :doc:`Migrating Farrow Filter from AIE to AIE-ML <./06-farrow_filter/README>`
+     - This tutorial uses the LeNet algorithm to implement a system-level design to perform image classification using the AIE-ML architecture and PL logic, including block RAM (BRAM). The design demonstrates functional partitioning between the AIE-ML and PL. It also highlights memory partitioning and hierarchy among DDR memory, PL (BRAM), Memory tile and AI Engine memory.
+
+   * - :doc:`Polyphase Channelizer on AIE-ML using Vitis Libraries <./07-Channelizer-Using-Vitis-Libraries/README.md>`
+     - This tutorial demonstrates how to leverage Vitis Libraries IP blocks to build a high performance Polyphase Channelizer on AIE-ML running at 2 GSPS.
+
+   * - :doc:`MNIST ConvNet on AIE-ML <./08-MNIST-ConvNet/README.md>`
+     - This tutorial implements a Convolutional Neural Network classifier on AIE-ML for identifying hand-written digits from the MNIST database. The goal is to illustrate how to partition & vectorize a simple machine learning example to Versal AI Engines.
 
 
 

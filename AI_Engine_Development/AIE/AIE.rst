@@ -1,4 +1,4 @@
-﻿#######################################
+#######################################
 AI Engine Development
 #######################################
 
@@ -53,14 +53,16 @@ Environment Settings
 
 .. important:: 
 
-   Before beginning a tutorial, read and follow the `Vitis Software Platform Release Notes <https://docs.amd.com/r/en-US/ug1393-vitis-application-acceleration/Vitis-Software-Platform-Release-Notes>`_ (v2024.1) for setting up software and installing the VCK190 base platform.
+   Before beginning a tutorial, read and follow the *Vitis Release Notes And Installation Guide* (`UG1742 <https://docs.amd.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1742-vitis-release-notes>`_) for setting up software and installing the VCK190 base platform.
+
+
 
 Run the following steps to set up the environment (do **NOT** apply to tutorials that do not use the VCK190 base platform):
 
-1. Set up your platform by running the ``xilinx-versal-common-v2024.1/environment-setup-cortexa72-cortexa53-xilinx-linux`` script as provided in the platform download. 
-   This script sets up the ``SYSROOT`` and ``CXX`` variables. If the script is not present, you **must** run the ``xilinx-versal-common-v2024.1/sdk.sh``.
-2. Set up your ``ROOTFS`` to point to the ``xilinx-versal-common-v2024.1/rootfs.ext4``.
-3. Set up your ``IMAGE`` to point to ``xilinx-versal-common-v2024.1/Image``.
+1. Set up your platform by running the ``xilinx-versal-common-v2024.2/environment-setup-cortexa72-cortexa53-xilinx-linux`` script as provided in the platform download. 
+   This script sets up the ``SYSROOT`` and ``CXX`` variables. If the script is not present, you **must** run the ``xilinx-versal-common-v2024.2/sdk.sh`` command.
+2. Set up your ``ROOTFS`` to point to the ``xilinx-versal-common-v2024.2/rootfs.ext4``.
+3. Set up your ``IMAGE`` to point to ``xilinx-versal-common-v2024.2/Image``.
 4. Set up your ``PLATFORM_REPO_PATHS`` environment variable based upon where you downloaded the platform.
 
 
@@ -153,15 +155,14 @@ These tutorials target the **VCK190** board. The table below lists the tutorials
    ":doc:`Debug Walkthrough Tutorial <./Feature_Tutorials/09-debug-walkthrough/README>`","Base","Linux","Vitis IDE","","","Yes","Yes","Yes","Yes","Yes","Yes","Yes"
    ":doc:`AIE DSPLib and Model Composer <./Feature_Tutorials/10-aie-dsp-lib-model-composer/README>`","Base","Linux","Simulink","DSPLib","MM2S / S2MM","Yes","Yes","","","","",""
    ":doc:`Versal Emulation Waveform Analysis <./Feature_Tutorials/11-ai-engine-emulation-waveform-analysis/README>`","Base","Linux","","","Traffic Generators","","","","Yes","","",""
-   ":doc:`AXIS External Traffic Generator <./Feature_Tutorials/12-axis-traffic-generator/README>`","Base","Linux","","DSPLib","MM2S / S2MM","","Yes","","Yes","","",""
    ":doc:`AIE Performance and Deadlock Analysis <./Feature_Tutorials/13-aie-performance-analysis/README>`","Base","Linux","","","","","Yes","","Yes","Yes","","Yes"
    ":doc:`Implementing an IIR Filter on the AIE <./Feature_Tutorials/14-implementing-iir-filter/README>`","Base","Linux","Vitis IDE","","","Yes","Yes","","","","",""
    ":doc:`Post-Link Recompile of an AIE Application <./Feature_Tutorials/15-post-link-recompile/README>`","Base","Linux","","","MM2S / S2MM","","Yes","","Yes","Yes","",""
    ":doc:`Python and C++ External Traffic Generators for AI Engine Simulation and Emulation Flows <./Feature_Tutorials/16-external-traffic-generator-aie/README>`","Base","Linux","","","MM2S / S2MM / PolarClip","Yes","Yes","Yes","Yes","","",""
    ":doc:`Using RTL IP with AI Engines <./Feature_Tutorials/17-RTL-IP-with-AIE-Engines/README>`","Custom","Linux","","","MM2S / S2MM","","Yes","","Yes","","",""
-   ":doc:`Using Verilog Traffic Generators in AIE Simulation <./Feature_Tutorials/19-aie_external_io_sv/README>`","Base","Linux","Vivado","","","Yes","Yes","","","","",""
    ":doc:`AIE Compiler Features <./Feature_Tutorials/20-aiecompiler-features/README>`","Base","Linux","","","MM2S / S2MM","Yes","Yes","","Yes","Yes","Yes","Yes"
-
+   ":doc:`Two Tone Filter <./Feature_Tutorials/21-two_tone_filter/README>`","Base","Linux","Yes","DSPLib","","Yes","Yes","","","","",""
+   ":doc:`RTL / AI Engine Interfacing Examples <./Feature_Tutorials/24-aie_pl_interface/README>`","Custom","N/A","Vivado & Vitis IDE","","","","","","Yes","","",""
 
 
 
@@ -197,3 +198,11 @@ These tutorials target the **VCK190** board. The table below lists the tutorials
    ":doc:`Digital Down-conversion Chain <./Design_Tutorials/09-ddc_chain/README>`","Base","Linux","","","","Yes","Yes","","","","",""
    ":doc:`Versal GeMM Implementation <./Design_Tutorials/10-GeMM_AIEvsDSP/README>`","Base","Linux","","DSPLib","Datamover","","Yes","","Yes","Yes","","Yes"
    ":doc:`Bilinear Interpolation <./Design_Tutorials/11-Bilinear_Interpolation/README>`","Base","Linux","","","","Yes","Yes","","","","",""
+   ":doc:`64K IFFT Using 2D Architecture <./Design_Tutorials/12-IFFT64K-2D/README>`","Base","Linux","","","","Yes","Yes","","","","",""
+   ":doc:`Implementing FFT and DFT Designs on AI Engines <./Design_Tutorials/13-FFT-DFT-on-AIE/README>`","Base","Linux","","","","Yes","Yes","","","","",""
+   ":doc:`Bitonic SIMD Sorting on AI Engine for float Datatypes <./Design_Tutorials/14-Bitonic-Sorting/README>`","Base","Linux","","","","Yes","Yes","","","","",""
+   ":doc:`Fractional Delay Farrow Filter <./Design_Tutorials/15-farrow_filter/README>`","Base","Linux","","","","Yes","Yes","","","","",""
+   ":doc:`1 Million Point float FFT @ 32 Gsps on AI Engine <./Design_Tutorials/16-1M-Point-FFT-32Gsps/README>`","Base","Linux","","","","Yes","Yes","","","","",""
+   ":doc:`System Partitioning of a Hough Transform on AI Engine <./Design_Tutorials/17-Hough-Transform/README>`","Base","Linux","","","","Yes","Yes","","","","",""
+   ":doc:`MUSIC Algorithm <./Design_Tutorials/18-MUSIC-Algorithm/README>`","Base","Linux","","MM2S / S2MM","","","","","","Yes","",""
+   ":doc:`Softmax Function <./Design_Tutorials/19-Softmax-Function/README>`","Base","Linux","","","","Yes","Yes","","","","",""

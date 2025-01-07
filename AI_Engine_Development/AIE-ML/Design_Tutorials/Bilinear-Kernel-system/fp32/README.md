@@ -4,14 +4,15 @@
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Tutorial Overview](#tutorial-overview)
-3. [Section 1: Compile AI Engine Code using the AI Engine Compiler for `x86simulator](#section-1)
+1. [Introduction](introduction)
+2. [Tutorial Overview](tutorial-overview)
+3. [Section 1: Compile AI Engine Code using the AI Engine Compiler for `x86simulator`](section-1)
 4. [Section 2: Simulate the AI Engine Graph using the `x86simulator`](section-2)
-5. [Section 3: Compile and Run Software Emulation](#section-3)
-6. [Section 4: Compile AI Engine Code for AIE Simulator](#section-4)
-7. [Section 5: Simulate the AI Engine Graph using the `aiesimulator`](#section-5)
-8. [Section 6: Build and Run on Hardware](#section-6)
+5. [Section 3: Compile and Run Software Emulation](section-3)
+6. [Section 4: Compile AI Engine Code for AIE Simulator](section-4)
+7. [Section 5: Simulate the AI Engine Graph using the `aiesimulator`](section-5)
+8. [Section 6: Build and Run on Hardware](section-6)
+9. [Section 7: Resources Utilization](section-6)
 
 [References](#references)
 
@@ -377,6 +378,54 @@ You should see on the screen:
 
 
 **IMPORTANT**: To re-run the application you need to power cycle the board.
+
+## Section 7: Resources Utilisation
+
+After the build process of the binary container, the AMD Vivado™ project of the entire design is generated. In folder `<workspace>/binary_container_1/binary_container_1/vivado/vpl/prj/` it is possible to find `prj.xpr` to take a look at the compilation result. The block design shows the presence of the HLS IP (`mm2s_1`, `mm2s_2`, `mm2s_3` and `s2mm`), connected to the memory through the NoC, and the AI Engine IP.
+
+![block_design](../images/bd.png)
+
+![block_design_zoom](../images/bd_zoom.png)
+
+From the Vivado Project, it is possible to take a look also to the resources utilisation. 
+
+```bash
+report_utilisation -name utilization_1
+```
+
+![resources_utilisation](../images/summary_utilization.png)
+
+Resources | Utilization
+------------ | -------------
+Registers | 9897
+CLB LUTs | 6577
+LUT as Logic | 5319
+LUT as Memory | 1258
+LOOKAHEAD8 | 114
+SLICE | 2165
+CLB Registers | 9625
+Block RAM | 4
+RAMB18E5 | 0
+RAMB36E5 | 4
+URAM | 0
+XRAM | 0
+DSP Slices | 0
+DSP58 | 0
+DSPFP32 | 0
+Bonded IOB | 336
+GLOBAL CLOCK BUFFERs | 4
+XPLL | 6
+MMCM | 1
+NOC Master 512 bit | 4
+PS NOC Master Unit | 8
+AI Engine NOC Slave Unit | 1
+AI ML NOC Slave | 1
+DDRMC | 3
+DDRMC_RIU | 3
+GTYP_QUAD | 1
+PS9 |
+BLI Registers | 272
+
 
 
 ## References

@@ -23,7 +23,9 @@ Bilinear interpolation is a method for interpolating functions of two variables 
 
 Bilinear interpolation is one of the simplest and fastest interpolation methods, but it can also introduce some artifacts such as blurring or aliasing. More advanced interpolation methods, such as bicubic interpolation or spline interpolation, can produce smoother and more accurate results, but they are also more computationally expensive.
 
-This tutorial targets AIE-ML device, and it has been setup starting from the files of the tutorial AIE [11-Bilinear_Interpolation](../../../AIE/Design_Tutorials/11-Bilinear_Interpolation).
+### Platform
+This tutorial targets AIE-ML device, and it has been setup starting from the files of the tutorial AIE [11-Bilinear_Interpolation](../../../AIE/Design_Tutorials/11-Bilinear_Interpolation). 
+The platform used in this tutorial is the VE2302 based on the xcve2302 device, but it is also possible to target the VEK280 board. In any case, you just need to change the `PLATFORM` variable in the makefile.
 
 ### AIE-ML Engine Input and Output Data Type
 This example is available in two versions:
@@ -130,6 +132,10 @@ Vitis Analyzer is an essential tool for accessing information on compilation, si
 $ make analyze
 ```
 
+The array view is shown in figure below.
+
+![array](./images/array_view.png)
+
 ### Floating point kernel performances 
 From the vitis analyzer tool it is possible to retrieve information about the performance of the graph. Let's have a look to the AI Engine resource utilisation:
 
@@ -144,7 +150,7 @@ Interface Channels used for Trace data | 0
 
 From the "trace" view it is possible to measure the kernel execution time:
 
-![trace_view_fp32](../images/trace_fp32.png)
+![trace_view_fp32](./images/trace_fp32.png)
 
 The AI Engine simulator output contains a timestamp for each piece of output data (aiesimulator_output/data/output.txt). Considering the first and the last timestamp, it is possible to get the total elaboration time.
 
@@ -169,7 +175,7 @@ Interface Channels used for Trace data | 0
 
 The "trace" view containts the kernel execution time. It is much shorter compared to fp32 bit case, as expected:
 
-![trace_view_fp32](../images/trace_int16.png)
+![trace_view_fp32](./images/trace_int16.png)
 
 ```bash
 kernel_exe_time = 1880 ns - 737 ns = 452 ns

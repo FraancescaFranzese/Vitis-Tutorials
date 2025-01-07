@@ -130,6 +130,54 @@ Vitis Analyzer is an essential tool for accessing information on compilation, si
 $ make analyze
 ```
 
+### Floating point kernel performances 
+From the vitis analyzer tool it is possible to retrieve information about the performance of the graph. Let's have a look to the AI Engine resource utilisation:
+
+| AI Engine Resource Utilisation (fp32 data type)	| |
+------------ | -------------
+Tiles used for AI Engine Kernels |	1 of 34 (2.94 %)
+Tiles used for Buffers |	3 of 34 (8.82 %)
+Memory Tiles used for Shared Buffers |	0 of 17 (0.00 %)
+Tiles used for Stream Interconnect |	7 of 52 (13.46 %)
+Interface Channels used for ADF Input/Output (PLIO) |	4
+Interface Channels used for Trace data | 0
+
+From the "trace" view it is possible to measure the kernel execution time:
+
+![trace_view_fp32](../images/trace_fp32.png)
+
+The AI Engine simulator output contains a timestamp for each piece of output data (aiesimulator_output/data/output.txt). Considering the first and the last timestamp, it is possible to get the total elaboration time.
+
+```bash
+kernel_exe_time = 9463 ns - 5143 ns = 4320 ns
+elaboration_rate = pixel_x_graph/kernel_exe_time = 256 / 4320 ns = 59.3 MP/s
+total_elaboration_time = 17690.65 us
+Throughput = output_data_amount/total_elaboration_time = 4194304 B / 17690.65 us = 237.09 MB/s
+```
+
+### int16 kernel performances 
+Same considerations are repeated for int16 case. The AI Engine resource utilisation is the same (but note that PLIO width in this case is 32-bit instead of 64-bit):
+
+| AI Engine Resource Utilisation (int16 data type)	| |
+------------ | -------------
+Tiles used for AI Engine Kernels |	1 of 34 (2.94 %)
+Tiles used for Buffers |	3 of 34 (8.82 %)
+Memory Tiles used for Shared Buffers |	0 of 17 (0.00 %)
+Tiles used for Stream Interconnect |	7 of 52 (13.46 %)
+Interface Channels used for ADF Input/Output (PLIO) |	4
+Interface Channels used for Trace data | 0
+
+The "trace" view containts the kernel execution time. It is much shorter compared to fp32 bit case, as expected:
+
+![trace_view_fp32](../images/trace_int16.png)
+
+```bash
+kernel_exe_time = 1880 ns - 737 ns = 452 ns
+elaboration_rate = pixel_x_graph/kernel_exe_time = 256 / 452 ns = 566.4 MP/s
+total_elaboration_time = 1916.66 us
+Throughput = output_data_amount/total_elaboration_time = 2097152 B / 17690.65 us = 1904.17 MB/s
+```
+
 
 ## Customizing the example
 

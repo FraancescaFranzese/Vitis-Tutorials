@@ -132,10 +132,10 @@ def build_atf(xsa):
 
 
 def read_target_connection():
-    if not os.path.isfile(".peers.ini"):
+    if not os.path.isfile("../_ide/.peers.ini"):
         print("Info: No Target Connections found. Please run the Vitis -> Target Connections GUI")
         return("")
-    file1 = open('.peers.ini', 'r')
+    file1 = open('../_ide/.peers.ini', 'r')
     Lines = file1.readlines()
     ret_data = {}
         

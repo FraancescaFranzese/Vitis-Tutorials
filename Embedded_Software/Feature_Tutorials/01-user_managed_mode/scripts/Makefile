@@ -12,9 +12,9 @@ BOARD ?= zcu102-rev1.0
 XSA ?= ./zcu102/design_1_wrapper.xsa
 
 ATF_REPO ?= https://github.com/Xilinx/arm-trusted-firmware.git
-ATF_CHECKOUT ?= xilinx-v2023.2
+ATF_CHECKOUT ?= xilinx-v2024.2
 UBOOT_REPO ?= https://github.com/Xilinx/u-boot-xlnx.git
-UBOOT_CHECKOUT ?= xilinx-v2023.2
+UBOOT_CHECKOUT ?= xilinx-v2024.2
 DEVICE_TREE_REPO ?= https://github.com/Xilinx/device-tree-xlnx.git
 DEVICE_TREE_CHECKOUT ?= xlnx_rel_v2024.1
 

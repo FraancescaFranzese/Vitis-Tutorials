@@ -18,7 +18,7 @@ create_xsa:
 sysroots:
 	$(RM) -rf ./xilinx-zcu102-v2024.2 ${LINUX_TMP_DIR}
 	petalinux-create project --template zynqMP -n ./xilinx-zcu102-v2024.2 --tmpdir ${LINUX_TMP_DIR}
-	cd ../xilinx-zcu102-v2024.2 && petalinux-config --get-hw-description=./zcu102/design_1_wrapper.xsa --silentconfig
+	cd ./xilinx-zcu102-v2024.2 && petalinux-config --get-hw-description=../zcu102/design_1_wrapper.xsa --silentconfig
 	sed -i 's/template/zcu102-rev1.0/' ./xilinx-zcu102-v2024.2/project-spec/configs/config
 	cd ./xilinx-zcu102-v2024.2 && petalinux-build
 	cd ./xilinx-zcu102-v2024.2 && petalinux-build --sdk

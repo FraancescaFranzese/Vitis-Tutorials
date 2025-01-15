@@ -19,7 +19,7 @@ platform generate
 
 # Create test applications
 app create -name linux_test_app -sysproj linux_test_app_system -platform zcu102_platform -domain linux_domain -template "Linux Empty Application"
-importsources -name linux_test_app -path ../src
+importsources -name linux_test_app -path ./src
 
 # Build applications
 app build all

@@ -44,6 +44,6 @@ if os.path.isfile(xsa):
     status = comp.set_sysroot(sysroot=sysroots)
 
     comp = client.get_component(name="linux_test_app")
-    status = comp.import_files(from_loc="../src", files=["linux_test_application.c"], dest_dir_in_cmp = "src")
+    status = comp.import_files(from_loc="./src", files=["linux_test_application.c"], dest_dir_in_cmp = "src")
 else:
     print("Error: No XSA passed")

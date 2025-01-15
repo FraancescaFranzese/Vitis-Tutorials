@@ -7,7 +7,7 @@
 
 # Debugging Bare-Metal Applications
 
-***Version: Vitis 2024.1***
+***Version: Vitis 2024.2***
 
 This section showcases the different debugging features available within the AMD Vitis™ embedded software development flow for bare-metal applications. Using an example application project with intentional bugs, the debug guide goes through each issue and leverages the different windows and features available in the application debug session to highlight the potential usage of debug features in a real world scenario.
 
@@ -21,14 +21,14 @@ The example design targets the Xilinx® ZCU102 evaluation platform and implement
 
 ## Build XSA
 
-Launch AMD Vivado™ 2024.1 and source run the following command from the TCL console:
+Launch AMD Vivado™ 2024.2 and source run the following command from the TCL console:
 
 ```
 cd scripts
 source create_xsa.tcl
 ```
 
-This creates a **design_1_wrapper.xsa** file in ../zcu102 directory
+This creates a **design_1_wrapper.xsa** file in ./zcu102 directory
 
 ## Build Vitis Unified Workspace
 
@@ -36,7 +36,7 @@ Enter the ``scripts`` directory, and run the following command from the command 
 
 ```
 cd scripts
-vitis -s unified_workspace.py ../zcu102/design_1_wrapper.xsa
+vitis -s unified_workspace.py ./zcu102/design_1_wrapper.xsa
 ```
 
 The Vitis workspace is created in the top-level directory in a folder named `unified_workspace`. Launch the Vitis Classic IDE and select the workspace to open the working directory.

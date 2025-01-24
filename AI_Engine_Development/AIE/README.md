@@ -425,6 +425,21 @@ These tutorials target the **VCK190** board. The table below lists the tutorials
  <td> </td>
  <td> </td>
  </tr>
+ <tr>
+ <td align="center"><a href="./Feature_Tutorials/25-AIE-kernel-optimization/">AIE Kernel Optimization</a></td>
+ <td>Base / Custom</td>
+ <td>Linux</td>
+ <td> </td>
+ <td> </td>
+ <td> </td>
+ <td> Yes </td>
+ <td> Yes </td>
+ <td> </td>
+ <td> </td>
+ <td> </td>
+ <td> </td>
+ <td> </td>
+ </tr>
  </table>
 
 ### Design Tutorials

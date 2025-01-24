@@ -1,5 +1,9 @@
 # Vitis-Tutorials ChangeLog
 
+## 2024.2_update (Jan. 23, 2025)
+### New Tutorials
+- AI_Engine_Development/AIE/Feature_Tutorials/25-AIE-kernel-optimization/
+
 ## 2024.2_update (Dec. 20, 2024)
 ### New Tutorials
 - AI_Engine_Development/AIE/Feature_Tutorials/23-AIE_independent_graphs/

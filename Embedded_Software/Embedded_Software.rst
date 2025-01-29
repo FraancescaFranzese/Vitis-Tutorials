@@ -1,10 +1,10 @@
 #######################################
-Embedded Software
+Vitis Embedded Software Tutorials
 #######################################
 
 
 
-Learn about the Vitis Embedded Design Flows.
+The tutorials under the Vitis™ Embedded Software category help you learn the Vitis Embedded Design Flows.
 
 
 ************************************************
@@ -18,6 +18,11 @@ Getting Started
    :hidden:
 
    Getting Started Tutorial <./docs/Getting_Started/README.md>
+
+
+
+
+The :doc:`./docs/Getting_Started/README` tutorial should act as the start point, or a refresher to the Vitis Unified Embedded flows.
 
 
 .. list-table:: Getting Started Tutorial
@@ -45,6 +50,7 @@ Feature Tutorials
    Feature Tutorials <./docs/Feature_Tutorials/Feature_Tutorials.rst>
 
 
+The :doc:`./docs/Feature_Tutorials/Feature_Tutorials` illustrate specific features of Vitis Embedded Software development flow, some features may not be required by all designs but are still useful for some use cases.
 
 
 .. list-table:: Feature Tutorials
@@ -53,16 +59,16 @@ Feature Tutorials
    
    * - Feature Tutorial
      - Design Target
-
-   * - :doc:`./docs/Feature_Tutorials/01-user_managed_mode/README`
-     - Introduces how command line users can make use of Vitis Unified IDE to debug their applications in GUI and how to quickly call makefile actions.
 	 
    * - :doc:`./docs/Feature_Tutorials/03-vitis_classic_to_unified_migration/README`
      - Demonstrates the migration steps and deep dive into the details about hardware to software handoff metadata, how to migrate libraries and drivers.
 	 
    * - :doc:`./docs/Feature_Tutorials/04-vitis_scripting_flows/README`
      - Demonstrates how to automate GUI steps with scripts for both project management and debugging.
-	 
+
+   * - :doc:`./docs/Feature_Tutorials/01-user_managed_mode/README`
+     - Introduces how command line users can make use of Vitis Unified IDE to debug their applications in GUI and how to quickly call makefile actions.
+
    * - :doc:`./docs/Feature_Tutorials/02-Debugging/README`
      - This tutorial demonstrates different debugging features available within the Vitis Embedded software development flow for bare-metal and Linux applications. It also introduces the flow to create a debuggable FSBL and how to do cross triggering in the Vitis Unified IDE.
 

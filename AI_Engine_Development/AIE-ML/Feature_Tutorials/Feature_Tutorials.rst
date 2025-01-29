@@ -24,7 +24,6 @@ The AIE-ML Development Feature Tutorials highlight specific features and flows t
    Versal Integration for Hardware Emulation and Hardware <./05-AI-engine-versal-integration/README.md>
    AI Engine-ML Performance Analysis Tutorial <./13-aie-ml-performance-analysis/README.md>
    AIE Compiler Features <./20-aiecompiler-features/README.md>
-   Performance Validation in Analysis View <./22-Performance-Validation-in-Analysis-View/README.md>
 
 
 
@@ -57,8 +56,6 @@ The AIE-ML Development Feature Tutorials highlight specific features and flows t
    * - :doc:`AIE Compiler Features <./20-aiecompiler-features/README>`
      - This tutorial shares a variety of features that are useful for AI Engine / AI Engine-ML (AIE-ML) programming to create more visible and efficient code compared to early versions of the compiler.
 
-   * - :doc:`Performance Validation in Analysis View <./22-Performance-Validation-in-Analysis-View/README>`
-     - This tutorial demonstrates throughput and latency computation after AI Engine Simulation and their analysis in the Analysis View of the Vitis Unified IDE.
 
 
 

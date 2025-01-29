@@ -33,16 +33,14 @@ The :doc:`landing page <../AIE>` of AI Engine Development contains important inf
    Debug Walkthrough <./09-debug-walkthrough/README.md>
    AI Engine DSP Library and Model Composer Tutorial <./10-aie-dsp-lib-model-composer/README.md>
    Versal Emulation Waveform Analysis <./11-ai-engine-emulation-waveform-analysis/README.md>
-   AXIS External Traffic Generator <./12-axis-traffic-generator/README.md>
    AI Engine Performance and Deadlock Analysis Tutorial <./13-aie-performance-analysis/README.md>
    Implementing an IIR Filter on the AI Engine <./14-implementing-iir-filter/README.md>
    Post-Link Recompile of an AI Engine Application <./15-post-link-recompile/README.md>
    Python and C++ External Traffic Generators for AI Engine Simulation and Emulation Flows <./16-external-traffic-generator-aie/README.md>
    Using RTL IP with AI Engines <./17-RTL-IP-with-AIE-Engines/README.md>
-   Using Verilog Traffic Generators in AIE Simulation <./19-aie_external_io_sv/README.md>
    AIE Compiler Features <./20-aiecompiler-features/README.md>
    Two Tone Filter on AIE Using DSP libraries and Vitis Model Composer <./21-two_tone_filter/README.md>
-   Performance Validation in Analysis View of the Vitis Unified IDE <./22-Performance-Validation-in-Analysis-View/README.md>
+   AIE PL Interface <./24-aie_pl_interface/README.md>
 
 
 
@@ -91,16 +89,13 @@ The :doc:`landing page <../AIE>` of AI Engine Development contains important inf
      - This tutorial demonstrates how to use kernels provided by the DSP library for a filtering application, how to analyze the design results, and how to use filter parameters to optimize the design's performance using simulation.
 
    * - :doc:`Debug Walkthrough <./09-debug-walkthrough/README>`
-     - This tutorial demonstrates how to debug a multi-processor application using the Versal ACAP AI Engines, using a beamformer example design. The tutorial illustrates functional debug and performance level debug techniques.
+     - This tutorial demonstrates how to debug a multi-processor application using the Versal adaptive SoC AI Engines, using a beamformer example design. The tutorial illustrates functional debug and performance level debug techniques.
 
    * - :doc:`AI Engine DSP Library and Model Composer Tutorial <./10-aie-dsp-lib-model-composer/README>`
      - This tutorial shows how to design AI Engine applications using Model Composer. This set of blocksets for Simulink is used to demonstrate how easy it is to develop applications for Xilinx devices, integrating RTL/HLS blocks for the Programmable Logic, as well as AI Engine blocks for the AI Engine array.
 
    * - :doc:`Versal Emulation Waveform Analysis <./11-ai-engine-emulation-waveform-analysis/README>`
-     - This tutorial demonstrates how you can use the Vivado logic simulator (XSIM) waveform GUI, and the Vitis analyzer to debug and analyze your design for a Versal ACAP.
-
-   * - :doc:`AXIS External Traffic Generator <./12-axis-traffic-generator/README>`
-     - This tutorial shows how to use AXI Traffic Generators to provide input and capture output from an AI Engine kernel in hardware emulation.
+     - This tutorial demonstrates how you can use the Vivado logic simulator (XSIM) waveform GUI, and the Vitis analyzer to debug and analyze your design for a Versal adaptive SoC.
 
    * - :doc:`AI Engine Performance and Deadlock Analysis Tutorial <./13-aie-performance-analysis/README>`
      - This tutorial introduces you to performance analysis and optimization methods, and shows you how synchronization works in graph execution. It also demonstrates the analysis of a hang issue using an example.
@@ -117,18 +112,14 @@ The :doc:`landing page <../AIE>` of AI Engine Development contains important inf
    * - :doc:`Using RTL IP with AI Engines <./17-RTL-IP-with-AIE-Engines/README>`
      - This tutorial demonstrates how to reuse any AXI-based IP you have created as an RTL IP, control your platform, and convert your RTL IP to an RTL kernel allowing for a more streamlined process for creating the design you need.
 
-   * - :doc:`Using Verilog Traffic Generators in AIE Simulation <./19-aie_external_io_sv/README>`
-     - This tutorial demonstrates how to use Verilog or System Verilog modules to drive traffic in and out of an ADF graph running in the AIE Simulator.
-
    * - :doc:`AIE Compiler Features <./20-aiecompiler-features/README>`
      - This tutorial shares a variety of features that are useful for AI Engine and AI Engine-ML (AIE-ML) programming to create more visible and efficient code compared to early versions of the compiler.
 
    * - :doc:`Two Tone Filter on AIE Using DSP libraries and Vitis Model Composer <./21-two_tone_filter/README>`
      - This tutorial demonstrates how to implement the same MATLAB model design using the Vitis DSP libraries targeting AI Engine. This MATLAB model design, which has a two tone input signal. The FIR suppresses 1-tone from a 2-tone input signal. The output of the FIR filter connects to the FFT block. This FFT block acts as a monitor to display a spectrum plot. This tutorial has four parts. In part 1, the sampling rate requirement is 400 Msps. In part 2, the sampling rate requirement is 2000 Msps. In part 3, implement part 1 of the design using Vitis IDE. In part 4, implement part 1 of the design using Vitis Model Composer tool.
 
-   * - :doc:`Performance Validation in Analysis View of the Vitis Unified IDE <./22-Performance-Validation-in-Analysis-View/README>`
-     - This tutorial demonstrates throughput and latency computation after AI Engine Simulation and their analysis in the Analysis View of the Vitis Unified IDE.
-
+   * - :doc:`AIE PL Interface <./24-aie_pl_interface/README>`
+     - This tutorial shows ways of interfacing user RTL logic to the AI Engine using the Vitis acceleration flow.
 
 
 

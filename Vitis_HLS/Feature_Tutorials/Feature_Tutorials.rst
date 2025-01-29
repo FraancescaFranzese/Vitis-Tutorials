@@ -30,3 +30,12 @@ Feature tutorials illustrate specific features of Vitis HLS development flow. So
    * - :doc:`Beamformer Analysis <./02-Beamformer_Analysis/README>`
      - Use HLS analysis tools to make low-level optimizations on a subset of the beamformer algorithm.
 
+
+
+
+
+
+
+.. Copyright © 2020–2024 Advanced Micro Devices, Inc
+
+.. `Terms and Conditions <https://www.amd.com/en/corporate/copyright>`_.

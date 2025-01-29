@@ -8,7 +8,7 @@
 
 # User Managed Mode in Vitis Unified Embedded IDE
 
-***Version: Vitis 2024.1***
+***Version: Vitis 2024.2***
 
 This is a new feature with the Vitis Unified Embedded IDE, where users can add a makefile and argument that can be used to create custom builds. This allows the user more control over their project builds instead of letting the tools generate the components.
 
@@ -23,7 +23,7 @@ This tutorial describes three use cases for the **User Managed Mode**.
 
 ### Let’s get started
 
-Launch Vitis 2024.1, select **open_workspace**, and navigate to the `Vitis-Tutorials/Embedded_Software/Feature_Tutorials/01-user_managed_mode` directory
+Launch Vitis 2024.2, select **open_workspace**, and navigate to the `Vitis-Tutorials/Embedded_Software/Feature_Tutorials/01-user_managed_mode` directory
 
 Select the **Open Explorer View**
 
@@ -31,7 +31,7 @@ Select the **Open Explorer View**
 
 ### Generating Build Configuration
 
-In this use case, we shall be using the Python script introduced in the *04-vitis_scripting_flows* to build a workspace and with a simple Hello World application template. However, users can also utilize the Python script `logs/builder.py` that gets generated for every Vitis Unified IDE workspace.
+In this use case, we shall be using the Python script introduced in the *04-vitis_scripting_flows* to build a workspace and with a simple Hello World application template. However, users can also utilize the Python script `logs/workspace_journal.py` that gets generated for every Vitis Unified IDE workspace.
 
 Right click in the **Explorer** view, right-click and select **Edit Build Configurations** and **New Build Configuration** and set similar as shown below. 
 
@@ -71,11 +71,11 @@ The Debug view will be launched, and users can debug as normal
 
 ## Use Case 2 - Running Platform Creation tutorials
 
-In this use case, we can build the example given here [here](https://github.com/Xilinx/Vitis-Tutorials/tree/2024.1/Vitis_Platform_Creation/Design_Tutorials). In particular, we will build the **Edge-AI-ZCU104** Platform.
+In this use case, we can build the example using the scripts given [here](https://github.com/Xilinx/Vitis-Tutorials/tree/2024.2/Vitis_Platform_Creation/Design_Tutorials/02-Edge-AI-ZCU104/ref_files/step1_vivado). In particular, we will build the **Edge-AI-ZCU104** Platform.
 
 ### Lets get started
 
-Launch Vitis 2024.1, select **open_workspace**, and navigate to the `Vitis-Tutorials/Embedded_Software/Feature_Tutorials/01-user_managed_mode` directory
+Launch Vitis 2024.2, select **open_workspace**, and navigate to the `Vitis-Tutorials/Embedded_Software/Feature_Tutorials/01-user_managed_mode` directory
 
 Select the **Open Explorer View**
 
@@ -83,7 +83,7 @@ Select the **Open Explorer View**
 
 ### Generating Build Configuration
 
-In this use case, copy the **Makefile**, **export_xsa.tcl** and the **system_step1.tcl** from The Git repository above into the workspace.
+In this use case, copy the **Makefile**, **export_xsa.tcl** and the **system_step1.tcl** from the [Edge-AT-ZCU104 repository](https://github.com/Xilinx/Vitis-Tutorials/tree/2024.2/Vitis_Platform_Creation/Design_Tutorials/02-Edge-AI-ZCU104/ref_files/step1_vivado) into the workspace.
 
 Right click in the **Explorer** view, and select **Edit Build Configurations** and **New Build Configurations** and set as shown below:
 
@@ -116,7 +116,7 @@ Each section above can be built independently. For example, if users want to mak
 
 ### Lets get started
 
-Launch Vitis 2024.1, select **open_workspace**, and navigate to the `Vitis-Tutorials/Embedded_Software/Feature_Tutorials/01-user_managed_mode` directory
+Launch Vitis 2024.2, select **open_workspace**, and navigate to the `Vitis-Tutorials/Embedded_Software/Feature_Tutorials/01-user_managed_mode` directory
 
 Select the **Open Explorer View**
 
@@ -131,6 +131,8 @@ If users want to create a Build Configuration, then right click in Explorer view
 jtag_boot:
 	vitis -s ./boot_script.py
 ``` 
+
+**Note:** You must run `make generate_boot_script` before running `make jtag_boot`
 
 Create the build configuration as follows
 

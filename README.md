@@ -333,7 +333,7 @@ To download a ZIP file of a specific branch, do one of the following:
                 <a href="./AI_Engine_Development/AIE/Feature_Tutorials/21-two_tone_filter">Two Tone Filter</a>
             </td>
             <td>
-                <a href="./AI_Engine_Development/AIE/Feature_Tutorials/24-aie_pl_interface">RTL / AI Engine interfacing Examples</a>
+                <a href="./AI_Engine_Development/AIE/Feature_Tutorials/23-AIE_independent_graphs/">AIE Independent Graphs :new: </a>
             </td>
             <td>
                 <a href="./AI_Engine_Development/AIE/Design_Tutorials/18-MUSIC-Algorithm">MUSIC Algorithm :new: </a>
@@ -344,9 +344,10 @@ To download a ZIP file of a specific branch, do one of the following:
         </tr>     
         <tr>
             <td height="24">
-                <a href="./AI_Engine_Development/AIE/Feature_Tutorials/23-AIE_independent_graphs/">AIE Independent Graphs :new: </a>
+                <a href="./AI_Engine_Development/AIE/Feature_Tutorials/24-aie_pl_interface">RTL / AI Engine interfacing Examples</a>   
             </td>
             <td>
+                <a href="./AI_Engine_Development/AIE/Feature_Tutorials/25-AIE-kernel-optimization/">AIE Kernel Optimization :new: </a>            
             </td>
             <td>
                 <a href="./AI_Engine_Development/AIE/Design_Tutorials/20-TDM-Mixer/">Time-Division Multiplexed Mixer :new: </a>

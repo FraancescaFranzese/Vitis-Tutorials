@@ -39,7 +39,8 @@ The :doc:`landing page <../AIE>` of AI Engine Development contains important inf
    Fractional Delay Farrow Filter <./15-farrow_filter/README.md>
    1 Million Point float FFT @ 32 Gsps on AI Engine <./16-1M-Point-FFT-32Gsps/README.md>
    System Partitioning of a Hough Transform on AI Engine <./17-Hough-Transform/README.md>
-
+   MUSIC Algorithm <./18-MUSIC-Algorithm/README.md>
+   Softmax Function <./19-Softmax-Function/README.md>
 
 
 
@@ -118,6 +119,11 @@ The :doc:`landing page <../AIE>` of AI Engine Development contains important inf
    * - :doc:`System Partitioning of a Hough Transform on AI Engine <./17-Hough-Transform/README>`
      - This tutorial walks through the process of planning the implementation of a well-known image processing algorithm, mapping and partitioning it to the resources available in a Versal Adaptive SoC device. We illustrate this using the Hough Transform—a feature extraction technique for computer vision and image processing.
 
+   * - :doc:`MUSIC Algorithm <./18-MUSIC-Algorithm/README>`
+     - This tutorial implements the Multiple Signal Classification (MUSIC) Algorithm on the AI Engine. MUSIC is a popular algorithm for Direction of Arrival (DOA) estimation in antenna array systems.
+
+   * - :doc:`Softmax Function <./19-Softmax-Function/README>`
+     - Softmax is an activation function often used in the output layer of a neural network designed for multi-class classification. This tutorial provides an example of how the softmax function might be implemented for those desiring to develop custom machine learning inference applications on AI Engines. 
 
 
 

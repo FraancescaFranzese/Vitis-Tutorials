@@ -104,7 +104,11 @@ This multi-part tutorial describes how to implement an [infinite impulse respons
  <tr>
  <td align="center"><a href="./24-aie_pl_interface/">RTL / AI Engine interfacing Examples</a></td>
  <td>This tutorial shows ways of interfacing user RTL logic to the AI Engine using the Vitis acceleration flow. </td>
- </tr>  
+ </tr>
+ <tr>
+ <td align="center"><a href="./25-AIE-kernel-optimization/">AIE Kernel Optimization</a></td>
+ <td>This tutorial teaches how to diagnose and improve compute efficiency of algorithms implemented as AI Engine kernels by analyzing generated microcode. Fundamentals of interpreting microcode are presented, and two example labs are provided to encourage hands-on experience with the process of using microcode to optimize AI Engine kernel performance. </td>
+ </tr>   
  </table>
 
 

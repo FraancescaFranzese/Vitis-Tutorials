@@ -6,7 +6,7 @@
 	"platform_allowlist": ["zcu102"],
     "platform_blocklist": [],
     "testinfo": {
-        "test_name": "ES_F_01-Deb-Bar",
+        "test_name": "ES_F_02-Deb-Bar",
         "disable": false,
         "jobs": [
             {
